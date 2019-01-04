@@ -10,3 +10,8 @@ Voyager_Communications_Simulation.m
 up_down_sampling_demo.m
 - This shows the effects of sampling a signal at one rate and then down sampling or upsampling with interpolation.  
 - The demo shows the same signal sampled directly at the same rate as the down and up sampled for comparison.
+
+MSEE Projects:
+M_PSK_Simulation.m
+- This is a monte carlo simulation of a M-ary PSK modulation and demodulation with Maximum Liklihood symbol detection algorithm.  The purpose is to demonstrate the symbol error rate for a PSK constellation of size M in an AWGN channel at a range of SNRs.
+
