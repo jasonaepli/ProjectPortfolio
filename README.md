@@ -18,5 +18,11 @@ M_PSK_Simulation.m
 - This is a monte carlo simulation of a M-ary PSK modulation and demodulation with Maximum Liklihood symbol detection algorithm.  The purpose is to demonstrate the symbol error rate for a PSK constellation of size M in an AWGN channel at a range of SNRs.
 
 Convolutional_Encoder_VA_Decoder_Sim.m
-- This is to demonstrate the Viterbi Algorithm step by step and show it's performance for decoding a [5 7 7] convolutionally encoded random message transmitted over an AWGN channel assuming Hard Decision Decoding.  The upper bounds for both Hard Decision Decoding and Soft Decision Decoding are also plotted to give the viewer a reference.  This sim will take an extremely long time to run if you set the SNR range too wide (>8 hours at least).
+- This is to demonstrate the Viterbi Algorithm step by step and show it's performance for decoding a [5 7 7] convolutionally encoded random message transmitted over an AWGN channel assuming Hard Decision Decoding.  This sim will take an extremely long time to run if you set the SNR range too wide (>8 hours at least).
 
+VA_BER_Upper_Bound.m
+- The upper bounds for both Hard Decision Decoding and Soft Decision Decoding are also plotted to give the viewer a reference.  
+
+Audio_Compression_Using_FFT.m
+- This script runs a lossy audio compression algorithm that selects a chunk of audio data (that originates from MATLAB's "hendel.mat" file) .wav file, applies a window function to enhance the spectral characteristics, and calculates the FFT of the selected and  windowed data.  From the FFT, the algorithm chooses only the "most significant" spectral information (n of the peaks to be exact) and zeroes the rest.  Then the algorithm synthesizes the audio file from the compressed data.  The script runs the algorithm for varying sizes of n to show how reducing the compression ratio (N/n) improves audio quality and plots how SNR performs over varying % compression.
+- If you'd like to test this on a .wav file of your choosing, simply comment out lines 12 and 13 and replace the name of the audiofile you'd like to import in the argument of the function in line 14.
